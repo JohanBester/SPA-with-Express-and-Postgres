@@ -16,7 +16,7 @@ app
 app.route('/', (req, res) => {
   console.log(process.env.USER);
   console.log(process.env.PORT);
-  res.send('HELLO WORLD');
+  res.json({'body': 'HELLO WORLD'});
 });
 
 app.listen(appPort, () => console.log(`Listening on port ${appPort}`));
