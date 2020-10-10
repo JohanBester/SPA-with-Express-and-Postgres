@@ -5,3 +5,5 @@ var allowCrossDomain = function(req, res, next) {
 
   next();
 };
+
+module.exports = allowCrossDomain;
