@@ -5,6 +5,7 @@ const db = require('../db.js');
 router
   .route('/')
   .get((request, response) => {
+    console.log("db_url", process.env.DATABASE_URL)
     db.query('SELECT * FROM posts', (error, res) => {
       if (error) {
         response.status(500).json({ error });
