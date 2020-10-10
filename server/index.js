@@ -11,4 +11,10 @@ app
   .use(morgan('dev'))
   .use('/posts', posts)
 
+app.route('/', (req, res) => {
+  console.log(process.env.USER);
+  console.log(process.env.PORT);
+  res.send('HELLO WORLD');
+});
+
 app.listen(appPort, () => console.log(`Listening on port ${appPort}`));
